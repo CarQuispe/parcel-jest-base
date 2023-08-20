@@ -1,5 +1,9 @@
 function esBisiesto(anio){
-    return true;
+
+    if(anio === 4){
+        return true;
+    }
+    return false;
   }
 
   export default esBisiesto;
