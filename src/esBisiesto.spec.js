@@ -21,4 +21,8 @@ describe("El año 2000 es bisiesto", () => {
 describe("El año 1900 no es bisiesto", () => {
   expect(esBisiesto(1900)).toBe(false);
 });
+
+describe("El año 2022 no es bisiesto", () => {
+  expect(esBisiesto(2022)).toBe(false);
+});
 });
