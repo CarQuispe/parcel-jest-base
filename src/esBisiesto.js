@@ -1,9 +1,11 @@
 function esBisiesto(anio){
 
-    if(anio === 4){
-        return true;
-    }
-    return false;
-  }
+    function esBisiesto(anio) {
+        if (anio % 4 === 0 ) {
+          return true;
+        } else {
+          return false;
+        }
+      }
 
   export default esBisiesto;

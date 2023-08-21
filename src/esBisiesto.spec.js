@@ -13,4 +13,8 @@ describe("No es  Bisiesto", () => {
       expect(esBisiesto(5)).toEqual(false);
     
   });
+
+  test("El año 2000 es bisiesto", () => {
+    expect(esBisiesto(2000)).toBe(true);
+  });
 });
