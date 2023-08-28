@@ -1,5 +1,5 @@
-function sumar(a, b) {
-  return a + b;
+function hola(nombre, edad) {
+  return hola.nombre
 }
 
-export default sumar;
+export default hola;
