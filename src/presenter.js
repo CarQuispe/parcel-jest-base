@@ -53,9 +53,32 @@ edadButton.addEventListener("click", () => {
     generoSaludo = "saludos";
   }
 
- 
+  const horaActual = new Date().getHours(); // Obtiene la hora actual del sistema
+  let saludoHora = "";
 
+  if (horaActual >= 0 && horaActual < 12) {
+    saludoHora = "Buenos días";
+  } else if (horaActual >= 12 && horaActual < 18) {
+    saludoHora = "Buenas tardes";
+  } else {
+    saludoHora = "Buenas noches";
+  }
+
+  const selectedIdioma = idiomaSelect.value;
+
+  if (selectedIdioma === "es") {
+    mostrarSaludoCompleto(saludoHora, generoSaludo, name);
+  } else if (selectedIdioma === "en") {
+    mostrarSaludoIngles();
+  }
 });
+
+function mostrarSaludoCompleto(saludoHora, generoSaludo, name) {
+  const mensajeFinal = `${saludoHora} y ${generoSaludo} ${name}`;
+  saludoDiv.innerHTML = mensajeFinal;
+  edadDiv.style.display = "none";
+}
+
 
 
 
