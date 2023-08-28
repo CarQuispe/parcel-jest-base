@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>CHATBOT</title>
+    <title>TOTALIZADOR</title>
   </head>
   <body>
-    <h1>Sumador</h1>
-    <form id="sumar-form">
-      <label for="primer-numero">Primer número:</label>
-      <input type="number" id="primer-numero" />
-      <label for="segundo-numero">Segundo número:</label>
-      <input type="number" id="segundo-numero" />
-      <input type="submit" value="Sumar" id="sumar-button" />
+
+    <h1>Totalizador</h1>
+    <form id="totalizador-form">
+      <label for="cantidad-input">Cantidad:</label>
+      <input type="number" id="cantidad-input" />
+      <label for="precio-input">Precio:</label>
+      <input type="number" id="precio-input" />
+      <input type="submit" value="Ingresar" id="ingresar-button" />
     </form>
     <div id="resultado-div"></div>
 
-    <script type="module" src="./src/presenter.js"></script>
+        <script type="module" src="./src/presenter.js"></script>
   </body>
 </html>
