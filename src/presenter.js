@@ -1,15 +1,18 @@
-import sumar from "./sumador";
+import Calcular from "./totalizador";
 
-const first = document.querySelector("#primer-numero");
-const second = document.querySelector("#segundo-numero");
-const form = document.querySelector("#sumar-form");
-const div = document.querySelector("#resultado-div");
+
+const cantidad = document.querySelector("#cantidad-input");
+const estadoSelect = document.querySelector("#estado-select");
+const form = document.getElementById("totalizador-form");
+const resultadoDiv = document.getElementById("resultado-div");
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
+  const cant = parseInt(cantidad.value);
 
-  const firstNumber = Number.parseInt(first.value);
-  const secondNumber = Number.parseInt(second.value);
-
-  div.innerHTML = "<p>" + sumar(firstNumber, secondNumber) + "</p>";
+  if (!isNaN(cant)) {
+    resultadoDiv.innerHTML = "<p>Cantidad ingresada: " + cant + "</p>";
+  } else {
+    resultadoDiv.innerHTML = "<p>Por favor, ingresa una cantidad válida</p>";
+  }
 });
