@@ -10,6 +10,10 @@ function Calcular(precio, cantidad, TI) {
   else if(precio_neto >= 3000 && precio_neto<7000){
     descuento = precio_neto * 0.05;
   }
+  else if(precio_neto >= 7000 && precio_neto<10000 ){
+    descuento = precio_neto * 0.07;
+  }
+
   
   const precio_neto_con_descuento = precio_neto - descuento;
   const impuesto = precio_neto_con_descuento * (TI / 100);
