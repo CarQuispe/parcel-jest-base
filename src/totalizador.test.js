@@ -25,4 +25,9 @@ describe("Calcular precio neto", () => {
   it("Con descuento >1000:", () => {
     expect(Calcular(500, 2, 6.65)).toEqual(1034.51); 
   });
+
+  it("Con descuento >3000:", () => {
+    expect(Calcular(1000, 3, 6.65)).toEqual(3039.53) 
+  });
+
 });
