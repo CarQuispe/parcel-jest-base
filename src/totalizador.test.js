@@ -16,4 +16,7 @@ describe("Calcular precio neto", () => {
   it("Mostrar el precio total con el valor del impuesto según el precio neto y el porcentaje de AL", () => {
     expect(Calcular(20,3,4)).toEqual(62.4);
   });
+  it("Mostrar el precio total del impuesto según el precio neto y el porcentaje de NV", () => {
+    expect(Calcular(20,3,8)).toEqual(64.8);
+  });
 });
