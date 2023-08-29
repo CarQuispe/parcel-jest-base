@@ -13,5 +13,7 @@ describe("Calcular precio neto", () => {
     expect(Calcular(20,3,6.25)).toEqual(63.75);
   });
   
-  
+  it("Mostrar el precio total con el valor del impuesto según el precio neto y el porcentaje de AL", () => {
+    expect(Calcular(20,3,4)).toEqual(62.4);
+  });
 });
