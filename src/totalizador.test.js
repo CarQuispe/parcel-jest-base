@@ -19,4 +19,10 @@ describe("Calcular precio neto", () => {
   it("Mostrar el precio total del impuesto según el precio neto y el porcentaje de NV", () => {
     expect(Calcular(20,3,8)).toEqual(64.8);
   });
+  it("Mostrar el precio total con el valor del impuesto según el precio neto y el porcentaje de UT", () => {
+    expect(Calcular(20,3,6.65)).toEqual(63.99);
+  });
+  it("Con descuento >1000:", () => {
+    expect(Calcular(500, 2, 6.65)).toEqual(1034.51); 
+  });
 });
