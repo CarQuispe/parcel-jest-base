@@ -22,20 +22,26 @@ describe("Calcular precio neto", () => {
   it("Mostrar el precio total con el valor del impuesto según el precio neto y el porcentaje de UT", () => {
     expect(Calcular(20,3,6.65)).toEqual(63.99);
   });
-  it("Con descuento >1000:", () => {
+  it("Con descuento si total es >1000:", () => {
     expect(Calcular(500, 2, 6.65)).toEqual(1034.51); 
   });
 
-  it("Con descuento >3000:", () => {
+  it("Con descuento si total es>3000:", () => {
     expect(Calcular(1000, 3, 6.65)).toEqual(3039.53) 
   });
    
-  it("Con descuento 7000:", () => {
+  it("Con descuento si total es>7000:", () => {
     expect(Calcular(1000, 7, 6.65)).toEqual(6942.91);
   });
 
-  it("Con descuento 10000:", () => {
+  it("Con descuento si total es>10000:", () => {
     expect(Calcular(1000, 11, 6.65)).toEqual(11731.5);
   });
+
+  it("Con descuento si total es>30000:", () => {
+    expect(Calcular(1000, 30, 6.65)).toEqual(27195.75); 
+  });
+
+  
 
 });
